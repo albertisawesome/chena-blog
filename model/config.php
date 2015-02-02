@@ -1,0 +1,3 @@
+<?php 
+    $path = "/chena-blog/";
+
