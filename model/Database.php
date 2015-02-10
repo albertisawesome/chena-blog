@@ -24,11 +24,18 @@ class Database {
     }
 
     public function closeConnection() {
-        
+        if(isset($this->conecction)) {
+            $this->connection->close();
+        }
     }
 
     public function query($string) {
+        $this->openConnection();
         
+        $query = $this->connection->query($string);
+        
+        
+        return $query;
     }
 
 }
