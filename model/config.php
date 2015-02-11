@@ -1,4 +1,6 @@
-<?php 
+<?php
+    require_once (__DIR__ . "/database.php");
+    
     $path = "/chena-blog/";
     
     $host = "localhost";
@@ -6,4 +8,4 @@
     $password = "root";
     $database = "blog_db";
         
-
+    $connection = new Database($host, $username, $password, $database);
