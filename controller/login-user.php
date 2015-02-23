@@ -5,3 +5,19 @@
     $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_STRING);
     
     $query = $_SESSION["connection"]->query("SELECT  salt, password FROM users WHERE username ='username'");
+    
+    if($query->num_rows == 1) {
+        $row = $queryy->fetch_array();
+    
+        if($row["password"] === crypt($password, $row["salt"])) {
+            echo "<p>Login Succesfull!</p>";
+        
+    }
+    else {
+        echo "<p>Invalid username and password</p>";
+    
+    }
+    }
+    else{
+        echo "<p>Invalid username and password<p>";
+    }
