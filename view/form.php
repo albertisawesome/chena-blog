@@ -1,7 +1,7 @@
 <?php
 require_once(__DIR__ . "/../model/config.php");
 require_once(__DIR__ . "/../controller/login-verify.php");
-
+//comment If the User authenticates it dies* The Model and Controller
 if(authenticateUser()) {
     die();
 }
@@ -15,7 +15,7 @@ if(authenticateUser()) {
             
     </div>
     
-    <div>
+    <div> 
         <label for="post">Post: </label>
         <textarea name="post"></textarea>
     </div>

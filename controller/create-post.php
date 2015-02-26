@@ -1,6 +1,6 @@
 <?php
 require_once(__DIR__ . "/../model/config.php");
-
+//comment Filters the TITLE AND POST and connects query to tables then sends the post to the database!
 $title = filter_input(INPUT_POST,  "title", FILTER_SANITIZE_STRING);
 $post = filter_input(INPUT_POST, "post", FILTER_SANITIZE_STRING);
 

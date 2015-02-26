@@ -1,7 +1,7 @@
 <?php
 
 class Database {
-
+//comment Privates the below into a Database.
     private $connection;
     private $host;
     private $username;
@@ -14,9 +14,9 @@ class Database {
         $this->username = $username;
         $this->password = $password;
         $this->database = $database;
-
+ //comment This makes the new mysqli And the $host and $username, $password to connect.
         $this->connection = new mysqli($host, $username, $password);
-
+        
         if ($this->connection->connect_error) {
             die("<p>Error: " . $this->connection->connect_error . "</p>");
         }
@@ -36,7 +36,7 @@ class Database {
 
     public function openConnection() {
         $this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
-
+//comment If the connection fails then it dies!
         if ($this->connection->connect_error) {
             die("<p>Error: " . $this->connection->connect_error . "</p>");
         }
@@ -47,7 +47,7 @@ class Database {
             $this->connection->close();
         }
     }
-
+//comment Opens the query open to the public!!
     public function query($string) {
         $this->openConnection();
 

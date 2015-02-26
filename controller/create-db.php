@@ -15,7 +15,7 @@ if($query){
 else{
     echo "<p>" . $_SESSION["connection"]->error . "</p>";
 }
-
+//comment THIS CREATES THE USERS TABLE
 $query = $_SESSION["connection"]->query("CREATE TABLE users ("
         . "id int(11) NOT NULL AUTO_INCREMENT, "
         . "username varchar(30) NOT NULL,"

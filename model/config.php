@@ -3,7 +3,7 @@
     session_start();
     session_regenerate_id(true);
     $path = "/chena-blog/";
-    
+    //comment  Allows the session to connect!!!!!!!!!!!!!!!!!!!!
     $host = "localhost";
     $username = "root";
     $password = "root";
